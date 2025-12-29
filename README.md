@@ -30,7 +30,7 @@ Nodes provides an intuitive framework for constructing data transformation graph
 ## Installation
 
 ```bash
-npm install @farar/nodes
+npm install @far-analytics/nodes
 ```
 
 ## Concepts
@@ -43,7 +43,7 @@ A `Node` is a component of a graph-like data transformation pipeline. Each `Node
 
 ### _A graph API pattern logger implementation_ <sup><sup>\</example\></sup></sup>
 
-Please see the [_Streams_ Logger](https://github.com/adpatter/streams-logger) implementation.
+Please see the [_Streams_ Logger](https://github.com/far-analytics/streams-logger) implementation.
 
 ## API
 
@@ -94,7 +94,7 @@ For example, the following `StringToNumber` implementation will convert a numeri
 
 ```ts
 import * as stream from "node:stream";
-import { Config, Node } from "@farar/nodes";
+import { Config, Node } from "@far-analytics/nodes";
 
 export class StringToNumber extends Node<string, number> {
   constructor(options: stream.TransformOptions) {
@@ -161,7 +161,7 @@ Nodes defaults to logging its errors to `process.stderr`. If your application re
 ### Optionally configure all internal errors to be thrown
 
 ```ts
-import { Config } from "@farar/nodes";
+import { Config } from "@far-analytics/nodes";
 Config.errorHandler = (err: Error) => {
   throw err;
 };
@@ -188,7 +188,7 @@ Excerpted from [Semantic Versioning 2.0.0](https://semver.org/):
 #### Clone the repository.
 
 ```bash
-git clone https://github.com/adpatter/nodes.git
+git clone https://github.com/far-analytics/nodes.git
 ```
 
 #### Change directory into the root of the repository.
@@ -211,6 +211,6 @@ npm test
 
 ## Support
 
-If you have a feature request or run into any issues, feel free to submit an [issue](https://github.com/adpatter/nodes/issues) or start a [discussion](https://github.com/adpatter/nodes/discussions). You’re also welcome to reach out directly to one of the authors.
+If you have a feature request or run into any issues, feel free to submit an [issue](https://github.com/far-analytics/nodes/issues) or start a [discussion](https://github.com/far-analytics/nodes/discussions). You’re also welcome to reach out directly to one of the authors.
 
 - [Adam Patterson](https://github.com/adpatter)
